@@ -3,6 +3,7 @@ import React from 'react';
 import {COLORS} from '@enums';
 
 const PersnoldataScreen = () => {
+  // hello feat/datascreen
   return (
     <View style={styles.container}>
       <Text>PersnoldataScreen</Text>
