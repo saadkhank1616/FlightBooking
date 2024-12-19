@@ -39,6 +39,11 @@ import EnglishIcon from './USA.svg';
 import KoreaIcon from './KRA.svg';
 import ItalyIcon from './ITALY.svg';
 import CheckIcon from './Check.svg';
+import PersnolDataImage from './persnodataimage.svg';
+import UploadIcon from './upload.svg';
+import ResetIocn from './reset.svg';
+import BascetIcon from './Basket.svg';
+import VisaIcon from './Visa.svg';
 export {
   BackArrow,
   HomeTabIcon,
@@ -81,4 +86,9 @@ export {
   KoreaIcon,
   ItalyIcon,
   CheckIcon,
+  PersnolDataImage,
+  UploadIcon,
+  ResetIocn,
+  BascetIcon,
+  VisaIcon,
 };
