@@ -1,11 +1,14 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import {COLORS} from '@enums';
+import {Header} from '@common/header';
 
 const PersnoldataScreen = () => {
+  // hello feat/datascreen
   return (
     <View style={styles.container}>
-      <Text>PersnoldataScreen</Text>
+      <Header heading="persnol data" />
+      <View style={styles.innerContainer}></View>
     </View>
   );
 };
@@ -17,5 +20,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.BackGround,
     flexDirection: 'row',
+  },
+  innerContainer: {
+    marginHorizontal: 10,
+    backgroundColor: 'white',
   },
 });
