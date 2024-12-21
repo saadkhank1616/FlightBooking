@@ -11,4 +11,6 @@ export enum SCREEN {
   Language = 'LanguageScreen',
   Persnol = 'PersnoldataScreen',
   ExtraCard = 'ExtracardScreen',
+  ExtraCardAdd = 'ExtraCardAddScreen',
+  MyBooking = 'MyBookinScreen',
 }
