@@ -22,3 +22,6 @@ export * from './listcard';
 export * from './cardlist';
 export * from './noticard';
 export * from './profilecard';
+export * from './extracard';
+export * from './modadelete';
+export * from './mybookingcard';

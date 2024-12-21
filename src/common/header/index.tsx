@@ -5,13 +5,13 @@ import React from 'react';
 // import {wp} from '@enums';
 import {styles} from './style';
 
-export const Header = ({heading, onPress, icon, Backarrow}) => {
+export const Header = ({heading, onPress, icon, Backarrow, deletpress}) => {
   return (
     <View style={styles.header}>
       <TouchableOpacity onPress={onPress}>{Backarrow}</TouchableOpacity>
       {/* <Spacer width={wp(30)} /> */}
       <Text style={styles.header_text}>{heading}</Text>
-      <View>{icon}</View>
+      <TouchableOpacity onPress={deletpress}>{icon}</TouchableOpacity>
     </View>
   );
 };

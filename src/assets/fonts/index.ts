@@ -44,6 +44,12 @@ import UploadIcon from './upload.svg';
 import ResetIocn from './reset.svg';
 import BascetIcon from './Basket.svg';
 import VisaIcon from './Visa.svg';
+import CreditCardExtraIcon from './creditcardextracard.svg';
+import VisaCardIcon from './visaextracard.svg';
+import PaypalCardicon from './paypalextracard.svg';
+import ExtraCardIcon from './extracardicon.svg';
+import Picon from './picon.svg';
+import BookinRoundIcon from './bookingroundtrip.svg';
 export {
   BackArrow,
   HomeTabIcon,
@@ -91,4 +97,10 @@ export {
   ResetIocn,
   BascetIcon,
   VisaIcon,
+  PaypalCardicon,
+  VisaCardIcon,
+  CreditCardExtraIcon,
+  ExtraCardIcon,
+  Picon,
+  BookinRoundIcon,
 };

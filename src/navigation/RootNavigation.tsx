@@ -40,6 +40,11 @@ export const AppNavigation = () => {
       <Stack.Screen name={SCREEN.Language} component={ui.LanguageScreen} />
       <Stack.Screen name={SCREEN.Persnol} component={ui.PersnoldataScreen} />
       <Stack.Screen name={SCREEN.ExtraCard} component={ui.ExtracardScreen} />
+      <Stack.Screen
+        name={SCREEN.ExtraCardAdd}
+        component={ui.ExtraCardAddScreen}
+      />
+      <Stack.Screen name={SCREEN.MyBooking} component={ui.MyBookinScreen} />
     </Stack.Navigator>
   );
 };
