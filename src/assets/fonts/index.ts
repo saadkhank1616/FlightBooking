@@ -50,6 +50,17 @@ import PaypalCardicon from './paypalextracard.svg';
 import ExtraCardIcon from './extracardicon.svg';
 import Picon from './picon.svg';
 import BookinRoundIcon from './bookingroundtrip.svg';
+import GreenFilterIcon from './greenfilter.svg';
+import SelectWhiteDotIcon from './selectwhitedot.svg';
+import WhiteArrowBack from './whitearrowback.svg';
+import WhitePlaneIcon from './whiteplane.svg';
+import SubtractDots from './Subtract.svg';
+import InfoIcon from './info.svg';
+import SummaryWeightIocn from './summaryweight.svg';
+import SUmmaryCartIcon from './summarycart.svg';
+import SummaryUmbrellaIocn from './summaryumbrella.svg';
+import SummaryInfoIcon from './summaryinfo.svg';
+
 export {
   BackArrow,
   HomeTabIcon,
@@ -103,4 +114,14 @@ export {
   ExtraCardIcon,
   Picon,
   BookinRoundIcon,
+  GreenFilterIcon,
+  SelectWhiteDotIcon,
+  WhiteArrowBack,
+  WhitePlaneIcon,
+  SubtractDots,
+  InfoIcon,
+  SummaryWeightIocn,
+  SUmmaryCartIcon,
+  SummaryUmbrellaIocn,
+  SummaryInfoIcon,
 };
