@@ -13,4 +13,6 @@ export enum SCREEN {
   ExtraCard = 'ExtracardScreen',
   ExtraCardAdd = 'ExtraCardAddScreen',
   MyBooking = 'MyBookinScreen',
+  SelectFlight = 'SelectFlightScreen',
+  Summary = 'SummaryScreen',
 }

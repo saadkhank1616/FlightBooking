@@ -45,6 +45,11 @@ export const AppNavigation = () => {
         component={ui.ExtraCardAddScreen}
       />
       <Stack.Screen name={SCREEN.MyBooking} component={ui.MyBookinScreen} />
+      <Stack.Screen
+        name={SCREEN.SelectFlight}
+        component={ui.SelectFlightScreen}
+      />
+      <Stack.Screen name={SCREEN.Summary} component={ui.SummaryScreen} />
     </Stack.Navigator>
   );
 };

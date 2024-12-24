@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import {styles} from './style';
 import {FormToFlight} from '@common/formtoflight';
 import {Spacer} from '@common/spacer';
-import {hp, wp} from '@enums';
+import {hp, SCREEN, wp} from '@enums';
 import {DepartInput} from '@common/departinput';
 import {ClassIcon, PassengerIcon, WeightIocn} from '@assets';
 import {Button} from '@common/button';
@@ -11,8 +11,10 @@ import {CustomModal} from '@common/modal';
 import {CustomCalendar} from '@common/calendar';
 import {ChooseTravelModal} from '@common/choosetravelmodal';
 import {ChooseClassModal} from '@common/chooseclassmodal';
+import {useNavigation} from '@react-navigation/native';
 
 export const RoundTrip = () => {
+  const navigation = useNavigation();
   // Modal visibility state
   const [isModalVisibleCalendar, setModalVisibleClendar] = useState(false);
   const [isModalVisiblePaseenger, setModalVisiblePassenger] = useState(false);
@@ -84,7 +86,10 @@ export const RoundTrip = () => {
         <Spacer />
       </View>
       <Spacer height={hp(4)} />
-      <Button title="Search Flights" onPress={() => console.log('pressed')} />
+      <Button
+        title="Search Flights"
+        onPress={() => navigation.navigate(SCREEN.SelectFlight)}
+      />
       <Spacer height={hp(4)} />
       <CustomModal
         visible={isModalVisibleCalendar}
