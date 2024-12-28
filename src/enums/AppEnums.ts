@@ -15,4 +15,8 @@ export enum SCREEN {
   MyBooking = 'MyBookinScreen',
   SelectFlight = 'SelectFlightScreen',
   Summary = 'SummaryScreen',
+  SummaryMulti = 'SummaryMultiScreen',
+  Information = 'InformationScreen',
+  InformationContact = 'InformationContactScren',
+  CustomerInformation = 'CustomrInformation',
 }

@@ -1,9 +1,18 @@
 import {FlatList, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
-import {COLORS, wp} from '@enums';
+import React, {useState} from 'react';
+import {COLORS, hp, SCREEN, wp} from '@enums';
 import {Header} from '@common/header';
-import {BackArrow, InfoIcon} from '@assets';
-import {CardList, Footer, Spacer, SummaryCard, SummaryTotal} from '@common';
+import {BackArrow, ConditionModalIocn, InfoIcon} from '@assets';
+import {
+  Button,
+  CardList,
+  CustomModal,
+  Footer,
+  Spacer,
+  SummaryCard,
+  SummaryTotal,
+} from '@common';
+import {useNavigation} from '@react-navigation/native';
 
 const cardData = [
   {
@@ -23,9 +32,25 @@ const cardData = [
 ];
 
 const SummaryScreen = () => {
+  const [modal, setModal] = useState(false);
+  const [conditionsmodal, setConditionModal] = useState(false);
+  const navigation = useNavigation();
+  const handelmodalvisible = () => {
+    setModal(false);
+    setConditionModal(true);
+  };
+  const handelnextcondition = () => {
+    setConditionModal(false);
+    navigation.navigate(SCREEN.Information);
+  };
   return (
     <View style={styles.container}>
-      <Header heading="Summary" Backarrow={<BackArrow />} icon={<InfoIcon />} />
+      <Header
+        heading="Summary"
+        Backarrow={<BackArrow />}
+        icon={<InfoIcon />}
+        onPress={() => navigation.goBack()}
+      />
       <Spacer />
       <View style={styles.textcontainer}>
         <Text style={styles.textheading}>One-way, (ThUR, 18 July, 2020)</Text>
@@ -43,7 +68,97 @@ const SummaryScreen = () => {
         <Spacer />
         <SummaryTotal />
       </View>
-      <Footer title="Next" />
+      <Footer title="Next" onPress={() => setModal(true)} />
+      <View>
+        <CustomModal visible={modal} onClose={() => setModal(false)}>
+          <View style={styles.modalcontainer}>
+            <Spacer />
+            <Text style={styles.detailtext}>Detail Bill</Text>
+            <Spacer height={hp(3)} />
+            <View style={styles.row}>
+              <Text>Price : </Text>
+              <Text>570,000 vnd</Text>
+            </View>
+            <Spacer />
+            <View style={styles.row}>
+              <Text>Fee : </Text>
+              <Text>1.000.000 vnđ</Text>
+            </View>
+            <Spacer />
+            <View style={styles.row}>
+              <Text>Luggage:</Text>
+              <Text>420.000 vnđ</Text>
+            </View>
+            <Spacer />
+            <View style={styles.row}>
+              <Text>VAT:</Text>
+              <Text>190.000 vnđ</Text>
+            </View>
+            <Spacer height={hp(4)} />
+            <Button title="Next" onPress={handelmodalvisible} />
+          </View>
+        </CustomModal>
+        <CustomModal
+          visible={conditionsmodal}
+          onClose={() => setConditionModal(false)}>
+          <View style={styles.modalcontainer}>
+            <Spacer />
+            <Text style={styles.detailtext}>Conditios of Tickets</Text>
+            <Spacer height={hp(3)} />
+            <View style={styles.icon}>
+              <ConditionModalIocn />
+            </View>
+            <Spacer height={hp(3)} />
+            <View style={styles.rowlines}>
+              <Text>Dear:</Text>
+              <Text> NGUYEN VAN CHIEN</Text>
+            </View>
+            <Spacer height={hp(2)} />
+            <View>
+              <Text>
+                Congratulations on your successful registration of VietNam
+                Airlines.
+              </Text>
+            </View>
+            <Spacer height={hp(2)} />
+            <View>
+              <Text>Your membership information includes:</Text>
+            </View>
+            <View style={styles.rowlines}>
+              <Text>Full name:</Text>
+              <Text> NGUYEN VAN CHIEN</Text>
+            </View>
+            <View style={styles.rowlines}>
+              <Text>Email:</Text>
+              <Text>chiennv.pixelz@gmail.com</Text>
+            </View>
+            <View style={styles.rowlines}>
+              <Text>VietNam Airlines Skyclub ID:</Text>
+              <Text>515118312280</Text>
+            </View>
+            <View style={styles.rowlines}>
+              <Text> Mobile phone :</Text>
+              <Text>0907561996</Text>
+            </View>
+            <View>
+              <Text>
+                Kindly top-up your card number to activate Vietjet Skyclub
+              </Text>
+            </View>
+            <View>
+              <Text>
+                For more detail, kindly contact Vietjet Call Center at
+              </Text>
+            </View>
+            <View>
+              <Text>(+84) 1900 1886</Text>
+            </View>
+            <Spacer height={hp(3)} />
+            <Button title="Agree" onPress={handelnextcondition} />
+            <Spacer />
+          </View>
+        </CustomModal>
+      </View>
     </View>
   );
 };
@@ -63,5 +178,25 @@ const styles = StyleSheet.create({
   },
   textheading: {
     color: COLORS.textcolor,
+  },
+  modalcontainer: {
+    padding: 14,
+    // paddingHorizontal: 10,
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  detailtext: {
+    color: '#00579A',
+    fontSize: wp(5),
+  },
+  icon: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  rowlines: {
+    flexDirection: 'row',
   },
 });

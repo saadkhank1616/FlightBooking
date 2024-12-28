@@ -70,7 +70,7 @@ const SelectFlightScreen = () => {
       <View style={styles.header}>
         {/* Top Header */}
         <View style={styles.topHeader}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => naviagtion.goBack()}>
             <WhiteArrowBack />
           </TouchableOpacity>
           <Text style={styles.selectFlightText}>Select Flights</Text>
