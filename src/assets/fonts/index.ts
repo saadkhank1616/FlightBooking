@@ -60,6 +60,12 @@ import SummaryWeightIocn from './summaryweight.svg';
 import SUmmaryCartIcon from './summarycart.svg';
 import SummaryUmbrellaIocn from './summaryumbrella.svg';
 import SummaryInfoIcon from './summaryinfo.svg';
+import ConditionModalIocn from './conditionmodal.svg';
+import YellowInformationIcon from './yellowinformation.svg';
+import LineInformationIcon from './lineinformation.svg';
+import GrayInformationIcon from './grayinformation.svg';
+import ProfileInformationIcon from './profileinformation.svg';
+import ContactinformationIcon from './contactinformation.svg';
 
 export {
   BackArrow,
@@ -124,4 +130,10 @@ export {
   SUmmaryCartIcon,
   SummaryUmbrellaIocn,
   SummaryInfoIcon,
+  ConditionModalIocn,
+  YellowInformationIcon,
+  LineInformationIcon,
+  GrayInformationIcon,
+  ProfileInformationIcon,
+  ContactinformationIcon,
 };

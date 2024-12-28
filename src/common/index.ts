@@ -28,3 +28,4 @@ export * from './mybookingcard';
 export * from './filtermodal';
 export * from './summarycard';
 export * from './summmarytotal';
+export * from './informationcard';

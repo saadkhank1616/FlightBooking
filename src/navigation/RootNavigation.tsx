@@ -50,6 +50,22 @@ export const AppNavigation = () => {
         component={ui.SelectFlightScreen}
       />
       <Stack.Screen name={SCREEN.Summary} component={ui.SummaryScreen} />
+      <Stack.Screen
+        name={SCREEN.SummaryMulti}
+        component={ui.SummaryMultiScreen}
+      />
+      <Stack.Screen
+        name={SCREEN.Information}
+        component={ui.InformationScreen}
+      />
+      <Stack.Screen
+        name={SCREEN.InformationContact}
+        component={ui.InformationContactScren}
+      />
+      <Stack.Screen
+        name={SCREEN.CustomerInformation}
+        component={ui.CustomrInformation}
+      />
     </Stack.Navigator>
   );
 };

@@ -3,7 +3,7 @@ import {FlatList, Text, View} from 'react-native';
 import {styles} from './style';
 import {MultiAddCard} from '@common/multiadd';
 import {Spacer} from '@common/spacer';
-import {hp, wp} from '@enums';
+import {hp, SCREEN, wp} from '@enums';
 import {Button} from '@common/button';
 import {PassengerIcon} from '@assets';
 
