@@ -66,7 +66,9 @@ import LineInformationIcon from './lineinformation.svg';
 import GrayInformationIcon from './grayinformation.svg';
 import ProfileInformationIcon from './profileinformation.svg';
 import ContactinformationIcon from './contactinformation.svg';
-
+import LugaggeIcon from './lugaggeicon.svg';
+import EatingIcon from './eatingicon.svg';
+import CrownIcon from './crownicon.svg';
 export {
   BackArrow,
   HomeTabIcon,
@@ -136,4 +138,7 @@ export {
   GrayInformationIcon,
   ProfileInformationIcon,
   ContactinformationIcon,
+  LugaggeIcon,
+  EatingIcon,
+  CrownIcon,
 };

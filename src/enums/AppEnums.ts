@@ -19,4 +19,8 @@ export enum SCREEN {
   Information = 'InformationScreen',
   InformationContact = 'InformationContactScren',
   CustomerInformation = 'CustomrInformation',
+  Informationsteptwo = 'InformationStepTwoScreen',
+  BuyLugagge = 'BuyLugaggeScreen',
+  EatingScreen = 'EatingScreen',
+  BussinesLongue = 'BusinessLongueScreen',
 }

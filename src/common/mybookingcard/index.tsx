@@ -1,4 +1,4 @@
-import {Text, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {styles} from './style';
 import {
@@ -10,9 +10,9 @@ import {
 import {Spacer} from '@common/spacer';
 import {hp} from '@enums';
 
-export const MyBookingCard = ({icon}) => {
+export const MyBookingCard = ({icon, onPress}) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <View style={styles.row}>
         <Text style={styles.codefrom}>SGN</Text>
         <ListFromIcon />
@@ -28,6 +28,6 @@ export const MyBookingCard = ({icon}) => {
         <Text style={styles.city}>Ho chi minh</Text>
         <Text style={styles.city}>Ha noi</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
