@@ -66,6 +66,16 @@ export const AppNavigation = () => {
         name={SCREEN.CustomerInformation}
         component={ui.CustomrInformation}
       />
+      <Stack.Screen
+        name={SCREEN.Informationsteptwo}
+        component={ui.InformationStepTwoScreen}
+      />
+      <Stack.Screen name={SCREEN.BuyLugagge} component={ui.BuyLugaggeScreen} />
+      <Stack.Screen name={SCREEN.EatingScreen} component={ui.EatingScreen} />
+      <Stack.Screen
+        name={SCREEN.BussinesLongue}
+        component={ui.BusinessLongueScreen}
+      />
     </Stack.Navigator>
   );
 };

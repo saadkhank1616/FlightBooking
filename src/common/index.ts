@@ -29,3 +29,6 @@ export * from './filtermodal';
 export * from './summarycard';
 export * from './summmarytotal';
 export * from './informationcard';
+export * from './lugaggemodal';
+export * from './longuemodal';
+export * from './earingmodal';

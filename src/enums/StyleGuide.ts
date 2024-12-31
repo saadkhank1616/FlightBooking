@@ -38,6 +38,14 @@ enum COLORS {
   textcolor = '#022541',
   textcolorlight = '#B3BABF',
   BackGround = '#F2F7F8',
+  White = '#FFFFFF', // Pure white for modals and cards
+  TextPrimary = '#0A2941', // Dark blue for primary text
+  TextSecondary = '#757575', // Gray for secondary text
+  SuccessGreen = '#1DB954', // Green for success or positive values (e.g., prices)
+  BorderGray = '#E0E0E0', // Light gray for borders
+  PrimaryYellow = '#FFC107', // Yellow for buttons or highlights
+  ModalOverlay = 'rgba(0, 0, 0, 0.5)', // Transparent overlay for modals
+  Red = '#FC1055', // Bright red for important indicators (optional)
 }
 
 enum FLASH_POSITION {
