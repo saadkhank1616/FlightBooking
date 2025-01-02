@@ -4,11 +4,17 @@ import {COLORS, hp} from '@enums';
 import {Header} from '@common/header';
 import {BackArrow, BookinRoundIcon, ListAeroplaeneIcon} from '@assets';
 import {Footer, MyBookingCard, Spacer} from '@common';
+import {useNavigation} from '@react-navigation/native';
 
 const MyBookinScreen = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Header heading="My Booking" Backarrow={<BackArrow />} />
+      <Header
+        heading="My Booking"
+        Backarrow={<BackArrow />}
+        onPress={() => navigation.goBack()}
+      />
       <Spacer height={hp(2)} />
       <View style={styles.innerContainer}>
         <Text style={styles.roundtext}>Round Trip</Text>

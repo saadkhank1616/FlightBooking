@@ -1,9 +1,10 @@
-import {Text, View} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {NotifcationLogoIcon} from '@assets'; // Assuming this is your notification logo
 import {styles} from './style';
+import {Spacer} from '@common/spacer';
 
-export const NotiCard = ({title, time, description}) => {
+export const NotiCard = ({title, time, description, type}) => {
   return (
     <View style={styles.container}>
       <View>
@@ -17,78 +18,27 @@ export const NotiCard = ({title, time, description}) => {
         <View>
           <Text style={styles.text}>{description}</Text>
         </View>
+        {/* Conditionally render buttons based on type */}
+        {/* <Spacer /> */}
+        <View style={styles.buttonContainer}>
+          {type === 'failed' ? (
+            <TouchableOpacity style={styles.buttonCheck}>
+              <Text style={styles.buttonText}>Check</Text>
+            </TouchableOpacity>
+          ) : type === 'update' ? (
+            <View style={styles.updateButtons}>
+              <TouchableOpacity style={styles.button}>
+                <Text style={styles.buttonText}>Update</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={[styles.button, styles.notNowButton]}>
+                <Text style={[styles.buttonText, styles.notNowText]}>
+                  Not Now
+                </Text>
+              </TouchableOpacity>
+            </View>
+          ) : null}
+        </View>
       </View>
     </View>
   );
 };
-
-// import React from 'react';
-// import {Text, View, TouchableOpacity, StyleSheet} from 'react-native';
-// import {CrossIcon, NotifcationLogoIcon} from '@assets'; // Assuming this is your notification logo
-// import {Swipeable} from 'react-native-reanimated';
-
-// export const NotiCard = ({title, time, description, type}) => {
-//   // Render the cross icon when swiped
-//   const renderRightActions = () => (
-//     <TouchableOpacity
-//       style={styles.crossButton}
-//       onPress={() => console.log('Delete notification')}>
-//       <CrossIcon />
-//     </TouchableOpacity>
-//   );
-
-//   return (
-//     <Swipeable renderRightActions={renderRightActions}>
-//       <View style={styles.container}>
-//         <View>
-//           <NotifcationLogoIcon />
-//         </View>
-//         <View style={styles.innerContainer}>
-//           <View style={styles.textContainer}>
-//             <Text style={styles.airlines}>{title}</Text>
-//             <Text>{time}</Text>
-//           </View>
-//           <View>
-//             <Text style={styles.text}>{description}</Text>
-//           </View>
-//         </View>
-//       </View>
-//     </Swipeable>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     padding: 15,
-//     backgroundColor: 'white',
-//     flexDirection: 'row',
-//     marginHorizontal: 10,
-//     borderRadius: 10,
-//     alignItems: 'center',
-//     gap: 20,
-//     marginBottom: 10,
-//   },
-//   textContainer: {
-//     flexDirection: 'row',
-//     justifyContent: 'space-between',
-//     width: '90%',
-//   },
-//   innerContainer: {
-//     justifyContent: 'space-between',
-//   },
-//   airlines: {
-//     color: '#022541',
-//     fontSize: 14,
-//   },
-//   text: {
-//     color: '#022541',
-//   },
-//   crossButton: {
-//     backgroundColor: '#f8d7da', // Light red background
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     width: 70,
-//     height: '100%',
-//     borderRadius: 10,
-//   },
-// });

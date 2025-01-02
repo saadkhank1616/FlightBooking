@@ -38,6 +38,7 @@ const HomeScreen = () => {
 
       {/* Content */}
       <ScrollView
+        showsVerticalScrollIndicator={false}
         style={styles.contentContainer}
         contentContainerStyle={styles.scrollContent}>
         {activeTab === 'Round trip' && <RoundTrip />}
@@ -87,6 +88,6 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingHorizontal: 18,
-    paddingVertical: 20,
+    // paddingVertical: 20,
   },
 });

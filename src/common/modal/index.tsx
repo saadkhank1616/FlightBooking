@@ -4,8 +4,10 @@ import {View, Modal, StyleSheet} from 'react-native';
 export const CustomModal = ({visible, onClose, children}) => {
   return (
     <Modal
-      animationType="slide"
-      transparent={true}
+      transparent
+      animationType="fade"
+      // animationType="slide"
+      // transparent={true}
       visible={visible}
       onRequestClose={onClose}>
       <View style={styles.modalOverlay}>

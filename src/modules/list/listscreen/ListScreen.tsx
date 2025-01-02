@@ -2,6 +2,8 @@ import {FlatList, StyleSheet, View} from 'react-native';
 import React from 'react';
 import {Spacer, CardList} from '@common';
 import {Header} from '@common/header';
+import {useNavigation} from '@react-navigation/native';
+import {SCREEN} from '@enums';
 
 const cardData = [
   {
@@ -33,9 +35,52 @@ const cardData = [
     price: '1,700,000 VND',
   },
   // Add more objects as needed
+  {
+    id: '5',
+    fromCode: 'DAN',
+    toCode: 'HAN',
+    fromCity: 'Da Nang',
+    toCity: 'Ha Noi',
+    duration: '1h20m',
+    departureTime: '08:00 AM',
+    departureDate: '19 July, 2020',
+    arrivalTime: '09:20 AM',
+    arrivalDate: '19 July, 2020',
+    airline: 'Pacific Airlines',
+    price: '1,700,000 VND',
+  },
+  {
+    id: '3',
+    fromCode: 'DAN',
+    toCode: 'HAN',
+    fromCity: 'Da Nang',
+    toCity: 'Ha Noi',
+    duration: '1h20m',
+    departureTime: '08:00 AM',
+    departureDate: '19 July, 2020',
+    arrivalTime: '09:20 AM',
+    arrivalDate: '19 July, 2020',
+    airline: 'Pacific Airlines',
+    price: '1,700,000 VND',
+  },
+  {
+    id: '4',
+    fromCode: 'DAN',
+    toCode: 'HAN',
+    fromCity: 'Da Nang',
+    toCity: 'Ha Noi',
+    duration: '1h20m',
+    departureTime: '08:00 AM',
+    departureDate: '19 July, 2020',
+    arrivalTime: '09:20 AM',
+    arrivalDate: '19 July, 2020',
+    airline: 'Pacific Airlines',
+    price: '1,700,000 VND',
+  },
 ];
 
 const ListScreen = () => {
+  const naviagtion = useNavigation();
   return (
     <View style={styles.container}>
       <Header heading="Which List" />
@@ -43,7 +88,12 @@ const ListScreen = () => {
       <FlatList
         data={cardData}
         keyExtractor={item => item.id}
-        renderItem={({item}) => <CardList item={item} />}
+        renderItem={({item}) => (
+          <CardList
+            item={item}
+            onPress={() => naviagtion.navigate(SCREEN.Summary)}
+          />
+        )}
         contentContainerStyle={styles.list}
         showsVerticalScrollIndicator={false}
       />

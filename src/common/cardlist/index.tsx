@@ -1,4 +1,4 @@
-import {Text, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {styles} from './style';
 import {
@@ -11,9 +11,9 @@ import {
 import {Spacer} from '@common/spacer';
 import {hp} from '@enums';
 
-export const CardList = ({item}) => {
+export const CardList = ({item, onPress}) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <View style={styles.row}>
         <Text style={styles.codefrom}>{item.fromCode}</Text>
         <ListFromIcon />
@@ -63,6 +63,6 @@ export const CardList = ({item}) => {
           </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };

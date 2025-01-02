@@ -39,7 +39,7 @@ export const MultiTrip = () => {
     <View>
       <Spacer />
       <MultiAddCard flight={item} />
-      <Spacer height={hp(2)} />
+      {/* <Spacer height={hp(1)} /> */}
     </View>
   );
 
@@ -66,6 +66,7 @@ export const MultiTrip = () => {
       </View>
       <Spacer />
       <Button title="Search Flights" />
+      <Spacer />
     </View>
   );
 };
