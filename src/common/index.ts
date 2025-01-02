@@ -32,3 +32,4 @@ export * from './informationcard';
 export * from './lugaggemodal';
 export * from './longuemodal';
 export * from './earingmodal';
+export * from './ticketscard';
