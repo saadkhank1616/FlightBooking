@@ -10,6 +10,8 @@ export const styles = StyleSheet.create({
     borderBottomRightRadius: 20,
     justifyContent: 'space-between',
     // width: '100%',
+    alignItems: 'center',
+    // marginHorizontal: 10,
   },
   header_text: {
     fontSize: 20,

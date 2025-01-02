@@ -45,11 +45,20 @@ const extracardData = [
 ];
 
 const ExtracardScreen = () => {
+  const [activeButton, setActiveButton] = useState<string | null>(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null); // Track the selected Extracard
   const navigation = useNavigation();
   const [pan] = useState(new Animated.ValueXY()); // Animated value for pan gesture
 
+  const handelWrong = () => {
+    setActiveButton('no');
+    setIsModalVisible(false);
+  };
+  const handelWright = () => {
+    setActiveButton('yes');
+    setIsModalVisible(false);
+  };
   // PanResponder setup
   const panResponder = PanResponder.create({
     onMoveShouldSetPanResponder: (e, gestureState) => {
@@ -126,10 +135,40 @@ const ExtracardScreen = () => {
         onClose={() => setIsModalVisible(false)} // Hides the modal on close
       >
         <View style={styles.modaldelte}>
-          <Text style={{color: 'white'}}>Are you sure you want to delete?</Text>
-          <TouchableOpacity onPress={() => setIsModalVisible(false)}>
-            <Text>Close</Text>
-          </TouchableOpacity>
+          <Text style={styles.notitext}>Notfication</Text>
+          <Spacer />
+          <Text style={styles.deletText}>You want delete credit card?</Text>
+          <Spacer height={hp(2)} />
+          <View style={styles.deleteModalBtn}>
+            <TouchableOpacity
+              onPress={handelWrong}
+              style={[
+                styles.wrongBtn,
+                activeButton === 'no' && styles.activeBtn,
+              ]}>
+              <Text
+                style={[
+                  styles.btnText,
+                  activeButton === 'no' && styles.activeBtnText,
+                ]}>
+                No, I’m wrong
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={handelWright}
+              style={[
+                styles.wrongBtn,
+                activeButton === 'yes' && styles.activeBtn,
+              ]}>
+              <Text
+                style={[
+                  styles.btnText,
+                  activeButton === 'yes' && styles.activeBtnText,
+                ]}>
+                Yes, 100%?
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </CustomModalDelete>
 
@@ -160,6 +199,55 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   modaldelte: {
-    backgroundColor: 'red',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    // padding: 10,
+    borderRadius: 10,
+    marginHorizontal: 20,
+    paddingVertical: 25,
+  },
+  deletmoadlbtn: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    width: '100%',
+  },
+  deleteModalBtn: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    width: '100%',
+  },
+  wrongBtn: {
+    // backgroundColor: '#4F755B',
+    paddingHorizontal: 40,
+    borderRadius: 5,
+    paddingVertical: 10,
+  },
+  notitext: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#022541',
+  },
+  deleteText: {
+    fontSize: 16,
+    color: '#022541',
+  },
+  btnText: {
+    fontSize: 16,
+    color: '#4F755B',
+    fontWeight: 'bold',
+  },
+  activeBtn: {
+    backgroundColor: '#4F755B', // New background color for active button
+  },
+  activeBtnText: {
+    color: 'white', // Text color for active button
+  },
+  deletText: {
+    fontSize: 16,
+    color: '#022541',
   },
 });

@@ -11,9 +11,9 @@ import {Button} from '@common/button';
 export const OneWayTrip = () => {
   return (
     <View style={styles.container}>
-      <Spacer height={hp(2)} />
+      <Spacer height={hp(1.5)} />
       <FormToFlight />
-      <Spacer height={hp(4)} />
+      <Spacer height={hp(2)} />
       <View style={styles.input_sec}>
         <DepartInput text="Depart" placeholder="2024-12-12" />
       </View>

@@ -1,3 +1,4 @@
+import {wp, hp} from '@enums';
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
@@ -56,5 +57,9 @@ export const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
+    width: wp(10),
+    height: hp(4.5),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

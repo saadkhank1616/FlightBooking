@@ -68,6 +68,7 @@ const ProfileScreen = () => {
           text="My Booking"
           icon={<ContollerIcon />}
           righticon={<RightIcon />}
+          onPress={() => navigation.navigate(SCREEN.MyBooking)}
         />
         <Spacer height={hp(2)} />
         <ProfileCard

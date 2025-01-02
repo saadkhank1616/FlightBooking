@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    borderRadius: 10,
+    borderRadius: 25,
     borderWidth: 0.5,
     // paddingVertical: 20,
     // paddingHorizontal: 60,

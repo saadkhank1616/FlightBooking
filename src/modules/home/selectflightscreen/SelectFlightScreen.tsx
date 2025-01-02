@@ -57,6 +57,20 @@ const cardData = [
     airline: 'Pacific Airlines',
     price: '1,700,000 VND',
   },
+  {
+    id: '4',
+    fromCode: 'SAN',
+    toCode: 'HAN',
+    fromCity: 'Da Nang',
+    toCity: 'Ha Noi',
+    duration: '1h20m',
+    departureTime: '08:00 AM',
+    departureDate: '19 July, 2020',
+    arrivalTime: '09:20 AM',
+    arrivalDate: '19 July, 2020',
+    airline: 'Pacific Airlines',
+    price: '1,700,000 VND',
+  },
 ];
 
 const SelectFlightScreen = () => {
@@ -92,12 +106,12 @@ const SelectFlightScreen = () => {
           </Svg>
 
           {/* Left Dot */}
-          <View style={[styles.dotContainer, {left: wp(31), top: hp(12)}]}>
+          <View style={[styles.dotContainer, {left: wp(38), top: hp(13)}]}>
             <SelectWhiteDotIcon />
           </View>
 
           {/* Right Dot */}
-          <View style={[styles.dotContainer, {right: wp(43), top: hp(12)}]}>
+          <View style={[styles.dotContainer, {right: wp(43), top: hp(13)}]}>
             <SelectWhiteDotIcon />
           </View>
 
@@ -112,7 +126,7 @@ const SelectFlightScreen = () => {
             <Text style={styles.flightType}>Non stop</Text>
           </View>
         </View>
-
+        <Spacer />
         {/* Locations */}
         <View style={styles.locationsContainer}>
           <View>
@@ -153,23 +167,31 @@ const SelectFlightScreen = () => {
           </TouchableOpacity>
         ))}
       </View>
-      {/* {Flatlis card data} */}
-      <View style={styles.modalCOntainer}>
+      {/* {FlatList card data} */}
+      <View style={styles.modalContainer}>
         <FlatList
           data={cardData}
           keyExtractor={item => item.id}
-          renderItem={({item}) => <CardList item={item} />}
-          //   contentContainerStyle={styles.list}
+          renderItem={({item}) => (
+            <View style={styles.cardContainer}>
+              <CardList
+                item={item}
+                onPress={() => naviagtion.navigate(SCREEN.Summary)}
+              />
+            </View>
+          )}
           showsVerticalScrollIndicator={false}
-          //   contentContainerStyle={{paddingBottom: 20}}
+          // numColumns={2}
+          contentContainerStyle={styles.listContainer}
         />
       </View>
+
       {/* custom modal */}
       <View style={styles.modalCOntainer}>
         <CustomModal
           visible={isModalVisible}
           onClose={() => setIsModalVisible(false)}>
-          <FilterModal onPress={() => naviagtion.navigate(SCREEN.Summary)} />
+          <FilterModal onPress={() => setIsModalVisible(false)} />
         </CustomModal>
       </View>
     </View>
@@ -184,7 +206,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.BackGround,
   },
   header: {
-    padding: 20,
+    padding: 15,
     backgroundColor: COLORS.green,
     alignItems: 'center',
     borderBottomLeftRadius: 15,
@@ -295,5 +317,17 @@ const styles = StyleSheet.create({
   modalCOntainer: {
     // flex: 1,
     // justifyContent: 'center',
+    // backgroundColor: 'red',
+  },
+  modalContainer: {
+    flex: 1,
+    // padding: 20, // Adjust padding around the modal container
+  },
+  listContainer: {
+    paddingBottom: 20, // Add space at the bottom of the list
+  },
+  cardContainer: {
+    flex: 1,
+    margin: 5, // Space between cards
   },
 });

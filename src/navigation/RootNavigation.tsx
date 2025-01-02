@@ -82,7 +82,7 @@ export const AppNavigation = () => {
 };
 
 export const RootNavigation = () => {
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
   return (
     <NavigationContainer>
       {user ? <AppNavigation /> : <AuthNavigation />}

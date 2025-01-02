@@ -34,9 +34,9 @@ export const RoundTrip = () => {
   };
   return (
     <View style={styles.container}>
-      <Spacer height={hp(2)} />
+      <Spacer height={hp(1.5)} />
       <FormToFlight />
-      <Spacer height={hp(4)} />
+      <Spacer height={hp(2)} />
       <View style={styles.input_sec}>
         <View style={styles.depart_con}>
           <DepartInput
@@ -48,7 +48,7 @@ export const RoundTrip = () => {
         <View style={styles.depart_con}>
           <DepartInput
             text="Return"
-            placeholder="2024-12-12"
+            placeholder="Choose date"
             onPress={handelVisibleCalendar}
           />
         </View>
