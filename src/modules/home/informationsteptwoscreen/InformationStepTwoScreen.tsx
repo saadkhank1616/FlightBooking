@@ -59,7 +59,10 @@ const InformationStepTwoScreen = () => {
           onPress={() => navigation.navigate(SCREEN.BussinesLongue)}
         />
       </View>
-      <Footer title="Next" />
+      <Footer
+        title="Next"
+        onPress={() => navigation.navigate(SCREEN.Tickets)}
+      />
     </View>
   );
 };

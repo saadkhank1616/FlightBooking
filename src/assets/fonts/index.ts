@@ -69,6 +69,7 @@ import ContactinformationIcon from './contactinformation.svg';
 import LugaggeIcon from './lugaggeicon.svg';
 import EatingIcon from './eatingicon.svg';
 import CrownIcon from './crownicon.svg';
+import BarCode from './barcode.svg';
 export {
   BackArrow,
   HomeTabIcon,
@@ -141,4 +142,5 @@ export {
   LugaggeIcon,
   EatingIcon,
   CrownIcon,
+  BarCode,
 };

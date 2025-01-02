@@ -23,4 +23,5 @@ export enum SCREEN {
   BuyLugagge = 'BuyLugaggeScreen',
   EatingScreen = 'EatingScreen',
   BussinesLongue = 'BusinessLongueScreen',
+  Tickets = 'TicketsScreen',
 }

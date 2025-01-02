@@ -9,6 +9,7 @@ import InformationStepTwoScreen from './informationsteptwoscreen/InformationStep
 import BuyLugaggeScreen from './buylugaggescreen/BuyLugaggeScreen';
 import EatingScreen from './eatingscreen/EatingScreen';
 import BusinessLongueScreen from './buinessloungescreen/BusinessLongueScreen';
+import TicketsScreen from './ticketsscreen/TicketsScreen';
 export {
   HomeScreen,
   SelectFlightScreen,
@@ -21,4 +22,5 @@ export {
   BuyLugaggeScreen,
   EatingScreen,
   BusinessLongueScreen,
+  TicketsScreen,
 };

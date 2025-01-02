@@ -36,7 +36,7 @@ const OnBoardingScreen = () => {
     if (currentSlide < slides.length - 1) {
       setCurrentSlide(currentSlide + 1);
     } else {
-      console.log('navigating');
+      // console.log(SCREEN.Login);
       navigation.navigate(SCREEN.Login); // Navigate to the Login screen
     }
   };
@@ -93,7 +93,6 @@ const OnBoardingScreen = () => {
           </View>
         </BlurView>
       </View>
-
       <TouchableOpacity style={styles.button} onPress={handleNext}>
         <Text style={styles.buttonText}>
           {currentSlide === slides.length - 1 ? "Let's go" : 'Next'}

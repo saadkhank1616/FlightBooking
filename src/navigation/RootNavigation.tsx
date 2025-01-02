@@ -76,12 +76,13 @@ export const AppNavigation = () => {
         name={SCREEN.BussinesLongue}
         component={ui.BusinessLongueScreen}
       />
+      <Stack.Screen name={SCREEN.Tickets} component={ui.TicketsScreen} />
     </Stack.Navigator>
   );
 };
 
 export const RootNavigation = () => {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(false);
   return (
     <NavigationContainer>
       {user ? <AppNavigation /> : <AuthNavigation />}
